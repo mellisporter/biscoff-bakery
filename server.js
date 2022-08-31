@@ -17,12 +17,15 @@ app.listen(port, ()=>{
     console.log("Oven is on!")
 })
 
+app.use(express.urlencoded({ extended: false }))
+
+
 //// ROUTES //////
 //////////////////
 
 // Index
 
-app.get("/" , function (req, res){
+app.get("/bakedgoods" , function (req, res){
     res.render("index.ejs" , {
         allBakedGoods: bakedGoods
     })
@@ -30,21 +33,25 @@ app.get("/" , function (req, res){
 
 
 // New
-app.get("/new", function (req, res){
+app.get("/bakedgoods/new", function (req, res){
     res.render("new.ejs")
 })
 // Destroy
 
-// Uupdate 
+// Update 
 
 // Create
-
+app.post("/bakedgoods", function (req, res){
+    bakedGoods.push(req.body)
+    // res.send("data received")
+    res.redirect("/bakedgoods")
+})
 
 // Edit
 
 // Show 
 
-app.get("/:indexOfBakedGoods" , function (req, res){
+app.get("/bakedgoods/:indexOfBakedGoods" , function (req, res){
     res.render("show.ejs" , {
         bakedGood: bakedGoods[req.params.indexOfBakedGoods]
     })

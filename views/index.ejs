@@ -7,14 +7,14 @@
     <title>Biscoff Bakery</title>
 </head>
 <nav>
-    <a href="/new">Add Baked Good</a>
+    <a href="/bakedgoods/new">Add Baked Good</a>
 </nav>
 <body>
     <h1>Biscoff Bakery</h1>
     <ul>
     <% for (let i = 0; i < allBakedGoods.length; i++) { %>
         <li>
-            <a href="/<%=i%>"><%=allBakedGoods[i].name%></a>
+            <a href="/bakedgoods/<%=i%>"><%=allBakedGoods[i].name%></a>
         </li>
    <% } %>
     </ul>
