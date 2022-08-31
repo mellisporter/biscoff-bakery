@@ -30,12 +30,15 @@ app.get("/" , function (req, res){
 
 
 // New
-
+app.get("/new", function (req, res){
+    res.render("new.ejs")
+})
 // Destroy
 
 // Uupdate 
 
 // Create
+
 
 // Edit
 
