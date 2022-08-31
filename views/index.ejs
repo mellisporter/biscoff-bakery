@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>Biscoff Bakery</h1>
+    <ul>
+    <% for (let i = 0; i < allBakedGoods.length; i++) { %>
+        <li>
+            <a href="/<%=i%>"><%=allBakedGoods[i].name%></a>
+        </li>
+   <% } %>
+    </ul>
 </body>
 </html>
