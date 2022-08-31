@@ -10,7 +10,9 @@
     <a href="/bakedgoods/new">Add Baked Good</a>
 </nav>
 <body>
-    <h1>Biscoff Bakery</h1>
+    
+    <div>
+        <h1>Biscoff Bakery</h1>
     <ul>
     <% for (let i = 0; i < allBakedGoods.length; i++) { %>
         <li>
@@ -18,5 +20,32 @@
         </li>
    <% } %>
     </ul>
+    </div>
+    <style type="text/css">
+        body {
+            background-image: url("https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFrZXJ5fGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        a {
+            color: white;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        div {
+            background-color: black;
+            text-align: center;
+        }
+
+        nav {
+            background-color: orange;
+            text-align: center;
+        }
+    </style>
+
 </body>
 </html>
